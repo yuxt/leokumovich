@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leokumovich Family Tree - Discover the Heritage and Lineage">
+    <meta name="keywords" content="Leokumovich, Family Tree, Genealogy, Heritage, Lineage, New York">
+    
+    <!-- Schema.org structured data for rich snippets -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Leokumovich Family Tree",
+            "description": "Dive deep into the lineage and heritage of the Leokumovich family, rooted in New York.",
+            "url": "https://leokumovich.com"
+        }
+    </script>
+    
+    <title>Leokumovich Family Tree - Heritage & Lineage</title>
+    
+    <!-- Add link to your stylesheet, favicon, and other relevant resources -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Leokumovich Family Tree</h1>
+    </header>
+
+    <nav>
+        <!-- Add your website navigation links here -->
+    </nav>
+
+    <main>
+        <section>
+            <h2>About the Leokumovich Family</h2>
+            <!-- Insert brief family history or introduction -->
+        </section>
+
+        <section>
+            <h2>Family Tree</h2>
+            <!-- Display a preview or introduction to the family tree with an access request button -->
+            <p>To access the complete family tree, please request access below.</p>
+            <button id="requestAccessBtn">Request Access</button>
+        </section>
+
+        <section>
+            <h2>Historical Records</h2>
+            <!-- Provide any historical records, images, or documents of interest -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Include footer information such as contact details or copyright statement -->
+    </footer>
+
+    <!-- Modal for Access Request Form -->
+    <div id="requestAccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Request Access to the Leokumovich Family Tree</h3>
+            <form action="/submit-request" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="reason">Reason for Request:</label>
+                <textarea id="reason" name="reason"></textarea>
+
+                <input type="submit" value="Submit Request">
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle the modal interactions -->
+    <script>
+        var modal = document.getElementById('requestAccessModal');
+        var btn = document.getElementById("requestAccessBtn");
+        var span = document.getElementsByClassName("close-btn")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
